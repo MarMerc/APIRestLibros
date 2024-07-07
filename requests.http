@@ -1,0 +1,24 @@
+GET http://localhost:3000/libros HTTP/1.1
+###
+GET http://localhost:3000/libros/2 HTTP/1.1
+###
+POST http://localhost:3000/new HTTP/1.1
+Content-Type: application/json
+
+{
+        "Titulo":"Cronica de una muerte anunciada",
+        "Autor":"Gabriel García Márquez",
+        "Editorial":"Editorial Sudamericana",
+        "Categoria":"Realismo mágico",
+        "Portada":"https://static.wikia.nocookie.net/esharrypotter/images/9/9a/Harry_Potter_y_la_Piedra_Filosofal_Portada_Espa%C3%B1ol.PNG/revision/latest/scale-to-width-down/1200?cb=20151020165725"
+}
+###
+PUT http://localhost:3000/libros/2 HTTP/1.1
+Content-Type: application/json
+
+{
+        "Categoria":"Realismo"
+}
+
+###
+DELETE http://localhost:3000/libros/11 HTTP/1.1
